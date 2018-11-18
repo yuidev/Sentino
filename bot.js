@@ -15,10 +15,10 @@ function puts(error, stdout, stderr) { sys.puts(stdout) }
 client.login(config.token);
 bot.login(config.token);
 bot.on('ready', () => {
-  bot.user.setActivity('Ich bin Deutscher Hip Hop', { type: 'WATCHING' }, { url: "https://www.youtube.com/watch?v=qLdxs74hL1U" })
-  bot.user.setStatus('dnd')
+  bot.user.setActivity(' Rolling around! | Sentino Bot Framework ', { type: 'LISTENING' }, { url: "https://www.youtube.com/watch?v=sbU15tvrkLE" })
+  bot.user.setStatus('online')
 })
-console.log(`Pomyślnie wystartowano`);
+console.log(`sentino framework loaded`);
 client.on('error', console.error);
 client.on('message', message => {
     if(message.content.toLowerCase() === 'sentino')
