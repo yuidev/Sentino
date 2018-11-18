@@ -21,11 +21,35 @@ bot.on('ready', () => {
 console.log(`sentino framework loaded`);
 client.on('error', console.error);
 client.on('message', message => {
-    if(message.content.toLowerCase() === 'sentino')
-
-        message.channel.send({
-    file: "https://f4.bcbits.com/img/a0381007741_10.jpg"
-})
+    if(message.content.toLowerCase() === 'n!help')
+message.channel.send({embed: {
+    color: 3447003,
+    author: {
+      name: client.user.username,
+      icon_url: client.user.avatarURL
+    },
+    title: "Artificial Nereid - help",
+    description: "The one and only documentation pieces for the Artificial Nereid.",
+    fields: [{
+        name: "n!p1",
+        value: "Placeholder command 1."
+      },
+      {
+        name: "n!p2",
+        value: "Placeholder command 2."
+      },
+      {
+        name: "n!p3",
+        value: "***THIRD*** placeholder command."
+      }
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© fuck you nigger"
+    }
+  }
+});
     else if(message.content.toLowerCase().includes('senti'))
     {
         message.channel.send("https://open.spotify.com/track/73Y3T1liCQuaUruFg0yP9b");    }
